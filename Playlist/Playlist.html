@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="widht=device-width, initial-scale=1.0">
+<title>My Simple First Playlist</title>
+	<!-- estilo da página -->
+	<style>
+		h1{
+			font-size: 80px;
+			font-family: Verdana;
+			color: #74F1FC;
+			
+		}
+		img{
+			border-radius: 80px;
+			cursor:pointer;
+		}
+	
+		p{
+			font-size: 72px;
+			font-family: Verdana;
+			color: #74F1FC;
+		}
+		a{
+			text-decoration: none;
+			font-size: 14px;
+			font-family: Verdana;
+			color: #74F1FC;
+		}
+		}
+	</style>
+	<!-- script da página -->
+	<script type="text/javascript">
+function Tocador(musicas){
+	
+	var musica = document.getElementById("playlist");
+	
+	switch(musicas) {
+			case "01":
+			musica.src = "1.mp3"
+			nomemusica.innerHTML="Marshmello - Alone";
+			break;
+			case "02":
+			musica.src = "2.mp3"
+			nomemusica.innerHTML="Alan Walker - All Falls Down";
+			break;
+			case "03":
+			musica.src = "3.mp3"
+			nomemusica.innerHTML="TheFatRat - Xenogenesis";
+			break;
+			case "04":
+			musica.src = "4.mp3"
+			nomemusica.innerHTML="Alok & Bhaskar - Fuego";
+			break;
+			case "05":
+			musica.src = "5.mp3"
+			nomemusica.innerHTML="Noma - Brain Power";
+			break;
+				  }
+}
+		
+	</script>
+	
+	
+</head>
+
+<body background="fundo.jpg">
+	
+	<h1 align="center">My First Playlist</h1>
+	<hr>
+	
+	<a href="#" onclick="if (playlist.hasAttribute('controls')){playlist.removeAttribute('controls')} else {playlist.setAttribute('controls', 'controls')}">Mostrar</a>
+	<table border="0" align="center">
+	
+		<tr>
+			<td><img src="Capa1.jpg" width="225" height="225" alt="capa1" onMouseOver="javascript: Tocador('01');"/></td>
+			<td><img src="Capa2.jpg" width="225" height="225" alt="capa2" onMouseOver="javascript: Tocador('02');"/></td>
+			<td><img src="Capa3.jpg" width="225" height="225" alt="capa3" onMouseOver="javascript: Tocador('03');"/></td>
+			<td><img src="Capa4.jpg" width="225" height="225" alt="capa4" onMouseOver="javascript: Tocador('04');"/></td>
+			<td><img src="Capa5.jpg" width="225" height="225" alt="capa5" onMouseOver="javascript: Tocador('05');"/></td>
+		</tr>
+	
+	</table>
+	<br>
+	<audio autoplay id="playlist"><source src="" ></audio>
+	<br>
+	<br>
+	<marquee behavior="alternate"><p id="nomemusica"></p></marquee>
+	
+	</body>
+</html>
